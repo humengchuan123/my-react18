@@ -1,0 +1,16 @@
+
+.btn-area{
+    display: flex;
+    justify-content: center;
+}
+.button{
+    user-select: none;
+    text-align: center;
+    background-color: pink;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 10px;
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+}
