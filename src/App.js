@@ -2,7 +2,7 @@
  * @Author: humengchuan 531537052@qq.com
  * @Date: 2023-10-16 16:26:06
  * @LastEditors: humengchuan 531537052@qq.com
- * @LastEditTime: 2023-10-17 14:38:25
+ * @LastEditTime: 2023-10-17 15:18:15
  * @FilePath: \projecte:\学习\react\my-learn-react\src\App.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -23,6 +23,15 @@ function App() {
       setListArray([...listArray, data])
     }
     console.log('%c [ e ]-19', 'font-size:13px; background:pink; color:#bf2c9f;', e, data, listArray)
+  }
+  const deleteTodoItem = (index) => {
+    // listArray.splice(index, 1)
+    // console.log('%c [ index ]-28', 'font-size:13px; background:pink; color:#bf2c9f;', index)
+    setListArray(pre => {
+      const newList = [...pre]
+      newList.splice(index, 1)
+      return newList
+    })
   }
   return (
     <div className="App">
@@ -45,7 +54,7 @@ function App() {
         listArray.map((item, index) => <Todo data={item} key={index}/>)
       } */}
       <CardForm onEmit={onChangeFromData} />
-      <Todo listArray={listArray} />
+      <Todo listArray={listArray} onDeleteItme={deleteTodoItem} />
       <Counter />
     </div>
   );
