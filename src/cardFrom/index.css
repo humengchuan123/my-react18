@@ -1,0 +1,22 @@
+.form{
+    width: 650px;
+    margin: 0 auto;
+}
+.form-button{
+    user-select: none;
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 10px auto;
+    background-color: #04bcef;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form-button:hover{
+    background-color: rgb(97, 222, 62);
+    color: #000;
+}
